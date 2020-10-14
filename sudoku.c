@@ -86,15 +86,15 @@ int is_valid(Node*n)
       {
         if(matriz[i][j]==(i+1))
         {
-        aux++;
+          aux++;
         }
         if(matriz[j][i]==(i+1))
         {
-        aux_2++;
+          aux_2++;
         }
         if((aux>1)||(aux_2>1))
         {
-        break;
+          break;
         }
       }
       if((aux>1)||(aux_2>1))
@@ -108,7 +108,7 @@ int is_valid(Node*n)
     return(0);
   }
   /*aqui comprobacion submatrices*/
-  if(compare_submatrix(matriz)==0)
+  if(compare_submatrix(matriz)!=1)
   {
     return(0);
   }
