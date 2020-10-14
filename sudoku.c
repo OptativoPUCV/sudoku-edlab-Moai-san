@@ -33,37 +33,17 @@ Node* read_file (char* file_name){
 }
 
 void print_node(Node* n){
-    int i,j;
-    for(i=0;i<9;i++){
-       for(j=0;j<9;j++)
-          printf("%d ", n->sudo[i][j]);
-       printf("\n");
-    }
-    printf("\n");
+  int i,j;
+  for(i=0;i<9;i++){
+      for(j=0;j<9;j++)
+        printf("%d ", n->sudo[i][j]);
+      printf("\n");
+  }
+  printf("\n");
 }
 
 int compare_submatrix(int matriz[9][9])
 {
-  /*int aux =0;
-    for(int o=1;o<=9;o++)
-    {
-      int k=4,p; 
-      for(p=0;p<9;p++)
-      {
-        //i = 4 + p/3    j = 3 + p%3
-        int i=3*(k/3) + (p/3) ;
-        int j=3*(k%3) + (p%3) ;
-        if(matriz[i][j]==o)
-        {
-        aux++;
-        }
-        if (aux>1)
-        {
-          return(0);
-        }
-      }
-      aux=0;
-    }*/
   int i =0;
   int j =0;
   int index_aux_i =0;
