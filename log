@@ -1,0 +1,112 @@
+Wed Oct 14 05:10:46 UTC 2020: 
+ sudoku.c | 23 ++++++++++++++++++++---
+ 1 file changed, 20 insertions(+), 3 deletions(-)
+In file included from test.c:5:0:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:54:22: error: invalid initializer
+    int matriz [9][9]=(n->sudo);
+                      ^
+sudoku.c:65:29: error: assignment to expression with array type
+                n_node->sudo =matriz;
+                             ^
+sudoku.c:66:16: error: implicit declaration of function ‘push_back’; did you mean ‘pushBack’? [-Werror=implicit-function-declaration]
+                push_back(list,n_node);
+                ^~~~~~~~~
+                pushBack
+cc1: all warnings being treated as errors
+Compilation failed
+Wed Oct 14 05:11:01 UTC 2020: 
+ sudoku.c | 23 ++++++++++++++++++++---
+ 1 file changed, 20 insertions(+), 3 deletions(-)
+In file included from test.c:5:0:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:54:22: error: invalid initializer
+    int matriz [9][9]=(n->sudo);
+                      ^
+sudoku.c:65:29: error: assignment to expression with array type
+                n_node->sudo =matriz;
+                             ^
+Compilation failed
+Wed Oct 14 05:12:04 UTC 2020: 
+ sudoku.c | 23 ++++++++++++++++++++---
+ 1 file changed, 20 insertions(+), 3 deletions(-)
+In file included from test.c:5:0:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:54:22: error: invalid initializer
+    int matriz [9][9]=(n->sudo);
+                      ^
+sudoku.c:65:29: error: assignment to expression with array type
+                n_node->sudo =&matriz;
+                             ^
+Compilation failed
+Wed Oct 14 05:12:40 UTC 2020: 
+ sudoku.c | 24 +++++++++++++++++++++---
+ 1 file changed, 21 insertions(+), 3 deletions(-)
+In file included from test.c:5:0:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:55:11: error: assignment to expression with array type
+    matriz =(n->sudo);
+           ^
+sudoku.c:66:29: error: assignment to expression with array type
+                n_node->sudo =&matriz;
+                             ^
+Compilation failed
+Wed Oct 14 05:19:50 UTC 2020: 
+ sudoku.c | 25 ++++++++++++++++++++++---
+ 1 file changed, 22 insertions(+), 3 deletions(-)
+In file included from test.c:5:0:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:56:11: error: assignment from incompatible pointer type [-Werror=incompatible-pointer-types]
+    matriz =(n->sudo);
+           ^
+sudoku.c:67:29: error: assignment to expression with array type
+                n_node->sudo =&matriz;
+                             ^
+cc1: all warnings being treated as errors
+Compilation failed
+Wed Oct 14 05:20:10 UTC 2020: 
+ sudoku.c | 25 ++++++++++++++++++++++---
+ 1 file changed, 22 insertions(+), 3 deletions(-)
+In file included from test.c:5:0:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:56:11: error: assignment from incompatible pointer type [-Werror=incompatible-pointer-types]
+    matriz =(n->sudo);
+           ^
+sudoku.c:67:29: error: assignment to expression with array type
+                n_node->sudo =matriz;
+                             ^
+cc1: all warnings being treated as errors
+Compilation failed
+Wed Oct 14 05:21:15 UTC 2020: 
+ sudoku.c | 25 ++++++++++++++++++++++---
+ 1 file changed, 22 insertions(+), 3 deletions(-)
+In file included from test.c:5:0:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:56:11: error: assignment from incompatible pointer type [-Werror=incompatible-pointer-types]
+    matriz =(n->sudo);
+           ^
+sudoku.c:67:29: error: assignment to expression with array type
+                n_node->sudo =matriz;
+                             ^
+cc1: all warnings being treated as errors
+Compilation failed
+Wed Oct 14 05:23:23 UTC 2020: 
+ sudoku.c | 24 +++++++++++++++++++++---
+ 1 file changed, 21 insertions(+), 3 deletions(-)
+In file included from test.c:5:0:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:66:29: error: assignment to expression with array type
+                n_node->sudo =matriz;
+                             ^
+sudoku.c:67:16: error: implicit declaration of function ‘push_back’; did you mean ‘pushBack’? [-Werror=implicit-function-declaration]
+                push_back(list,n_node);
+                ^~~~~~~~~
+                pushBack
+cc1: all warnings being treated as errors
+Compilation failed
+Wed Oct 14 05:24:34 UTC 2020: 
+ sudoku.c | 24 +++++++++++++++++++++---
+ 1 file changed, 21 insertions(+), 3 deletions(-)
+ tests:  0|5
+total_score: 0/70
+0159657

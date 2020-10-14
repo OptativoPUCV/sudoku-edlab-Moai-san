@@ -48,11 +48,29 @@ int is_valid(Node* n){
 }
 
 
-List* get_adj_nodes(Node* n){
-    List* list=createList();
-    return list;
+List* get_adj_nodes(Node* n)
+{
+   List* list=createList();
+   int matriz [9][9];
+   memcpy(matriz,(n->sudo),sizeof(matriz));
+   for (int i =0;i<9;i++)
+   {
+      for (int j =0;j<9;j++)
+      {
+         if(matriz[i][j]==0)
+         {
+            for(int valor=0;valor<9;valor++)
+            {
+               matriz[i][j]=valor;
+               Node* n_node =(Node*)calloc(1,sizeof(Node));
+               memcpy(n_node->sudo,matriz,sizeof(matriz));
+               pushBack(list,n_node);
+            }
+         }
+      }
+   }
+   return(list);
 }
-
 
 int is_final(Node* n){
     return 0;
