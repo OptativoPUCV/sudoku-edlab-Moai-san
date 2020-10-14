@@ -84,6 +84,7 @@ int is_valid(Node*n)
       aux_2 =0;
       for(j=0; j<9 ;j++)
       {
+        printf ("[%d] [%d] = %d\n",i,j,matriz[i][j]);
         if(matriz[i][j]==(i+1))
         {
           aux++;
