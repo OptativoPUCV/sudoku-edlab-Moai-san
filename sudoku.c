@@ -78,7 +78,7 @@ int is_valid(Node*n)
   int j =0;
   int aux;
   int aux_2;
-  for(i=j; i<9 ;i++) //comprobacion filas y columnas
+  for(i=0; i<9 ;i++) //comprobacion filas y columnas
     {
       aux =0;
       aux_2 =0;
