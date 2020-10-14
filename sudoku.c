@@ -120,27 +120,29 @@ int is_valid(Node*n)
 
 List* get_adj_nodes(Node* n)
 {
+  int j;
    List* list=createList();
    int matriz [9][9];
    memcpy(matriz,(n->sudo),sizeof(matriz));
    for (int i =0;i<9;i++)
    {
-      for (int j =0;j<9;j++)
+    for (j =0;j<9;j++)
+    {
+      if(matriz[i][j]==0)
       {
-         if(matriz[i][j]==0)
-         {
-            for(int valor=1;valor<=9;valor++)
-            {
-              matriz[i][j]=valor;
-              Node* n_node =(Node*)calloc(1,sizeof(Node));
-              if(is_valid(n_node)==1)
-              {
-                memcpy(n_node->sudo,matriz,sizeof(matriz));
-                pushBack(list,n_node);
-              }
-            }
-         }
+        break;
       }
+    }
+    for(int valor=1;valor<=9;valor++)
+    {
+      matriz[i][j]=valor;
+      Node* n_node =(Node*)calloc(1,sizeof(Node));
+      if(is_valid(n_node)==1)
+      {
+        memcpy(n_node->sudo,matriz,sizeof(matriz));
+        pushBack(list,n_node);
+      }
+    }
    }
    return(list);
 }
