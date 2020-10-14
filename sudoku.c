@@ -97,7 +97,7 @@ int is_valid(Node*n)
           break;
         }
       }
-      if((aux>1)||(aux_2>1))
+      if((aux>1)||((aux_2)>1))
       {
         break;
       }
