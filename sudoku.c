@@ -86,6 +86,7 @@ int compare_submatrix(int matriz[9][9])
           }
         }
         j=(j-3);
+        printf("%d\n",j);
       }
       i=(i-3);
     }
