@@ -84,11 +84,11 @@ int is_valid(Node*n)
       aux_2 =0;
       for(j=i; j<9 ;j++)
       {
-        if(matriz[i][j]==i)
+        if(matriz[i][j]==(i+1))
         {
         aux++;
         }
-        if(matriz[j][i])
+        if(matriz[j][i]==(i+1))
         {
         aux_2++;
         }
