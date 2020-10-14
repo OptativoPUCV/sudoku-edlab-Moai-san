@@ -44,12 +44,13 @@ void print_node(Node* n){
 
 int compare_submatrix(int matriz[9][9])
 {
-  int aux =0;
+  /*int aux =0;
     for(int o=1;o<=9;o++)
     {
       int k=4,p; 
       for(p=0;p<9;p++)
       {
+        //i = 4 + p/3    j = 3 + p%3
         int i=3*(k/3) + (p/3) ;
         int j=3*(k%3) + (p%3) ;
         if(matriz[i][j]==o)
@@ -62,7 +63,43 @@ int compare_submatrix(int matriz[9][9])
         }
       }
       aux=0;
+    }*/
+  int i =0;
+  int j =0;
+  int aux =0;
+  while(1)
+  {
+    for (int numeros =1;numeros<=9;numeros++)
+    {
+      aux =0;
+      for (i=i;i<(i+3);i++)
+      {
+        for (j=j;j<(j+3);j++)
+        {
+          if (matriz[i][j]==numeros)
+          {
+            aux++;
+          }
+          if (aux>1)
+          {
+            return(0);
+          }
+        }
+        j=(j-3);
+      }
+      i=(i-3);
     }
+    j= (j+3);
+    if (j>=9)
+    {
+      j=(0);
+      i=(i+3);
+      if (i>=9)
+      {
+        return(1);
+      }
+    }
+  }
   return(1);
 }
 
