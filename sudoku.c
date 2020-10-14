@@ -133,14 +133,17 @@ List* get_adj_nodes(Node* n)
         break;
       }
     }
-    for(int valor=1;valor<=9;valor++)
+    if(matriz[i][j]==0)
     {
-      matriz[i][j]=valor;
-      Node* n_node =(Node*)calloc(1,sizeof(Node));
-      if(is_valid(n_node)==1)
+      for(int valor=1;valor<=9;valor++)
       {
-        memcpy(n_node->sudo,matriz,sizeof(matriz));
-        pushBack(list,n_node);
+        matriz[i][j]=valor;
+        Node* n_node =(Node*)calloc(1,sizeof(Node));
+        if(is_valid(n_node)==1)
+        {
+          memcpy(n_node->sudo,matriz,sizeof(matriz));
+          pushBack(list,n_node);
+        }
       }
     }
    }
