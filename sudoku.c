@@ -142,7 +142,7 @@ List* get_adj_nodes(Node* n)
         memcpy(n_node->sudo,matriz,sizeof(matriz));
         if(is_valid(n_node)==1)
         {
-          //printf("%d",matriz[i])
+          printf("%d\n",matriz[i][j]);
           pushBack(list,n_node);
         }
       }
