@@ -66,15 +66,17 @@ int compare_submatrix(int matriz[9][9])
     }*/
   int i =0;
   int j =0;
+  int index_aux_i =0;
+  int index_aux_j =0;
   int aux =0;
   while(1)
   {
     for (int numeros =1;numeros<=9;numeros++)
     {
       aux =0;
-      for (i=i;i<(i+3);i++)
+      for (i=i;i<(index_aux_i+3);i++)
       {
-        for (j=j;j<(j+3);j++)
+        for (j=j;j<(index_aux_j+3);j++)
         {
           if (matriz[i][j]==numeros)
           {
@@ -100,6 +102,8 @@ int compare_submatrix(int matriz[9][9])
         return(1);
       }
     }
+    index_aux_i =i;
+    index_aux_j =j;
   }
   return(1);
 }
