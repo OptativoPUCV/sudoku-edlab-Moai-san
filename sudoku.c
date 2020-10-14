@@ -104,6 +104,7 @@ int is_valid(Node*n)
     }
   if((aux>1)||(aux_2>1))
   {
+    printf("Prohibido Hablar de Huevito Rey\n");
     return(0);
   }
   /*aqui comprobacion submatrices*/
