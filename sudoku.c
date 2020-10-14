@@ -47,72 +47,71 @@ int compare_submatrix(int matriz[9][9])
   int aux =0;
     for(int o=1;o<=9;o++)
     {
-        int k=4,p; 
-        for(p=0;p<9;p++)
+      int k=4,p; 
+      for(p=0;p<9;p++)
+      {
+        int i=3*(k/3) + (p/3) ;
+        int j=3*(k%3) + (p%3) ;
+        if(matriz[i][j]==o)
         {
-            int i=3*(k/3) + (p/3) ;
-            int j=3*(k%3) + (p%3) ;
-            if(matriz[i][j]==o)
-            {
-            aux++;
-            }
-            if (aux>1)
-            {
-                return(0);
-            }
+        aux++;
         }
         if (aux>1)
         {
             return(0);
         }
-        aux=0;
+      }
+      if (aux>1)
+      {
+        return(0);
+      }
+      aux=0;
     }
-    return(1);
+  return(1);
 }
 
 int is_valid(Node*n)
 {
-   int matriz[9][9];
-   memcpy(matriz,(n->sudo),sizeof(matriz));
-   int i =0;
-   int j =0;
-   int aux;
-   int aux_2;
-   for(i=j; i<9 ;i++) //comprobacion filas y columnas
-   {
+  int matriz[9][9];
+  memcpy(matriz,(n->sudo),sizeof(matriz));
+  int i =0;
+  int j =0;
+  int aux;
+  int aux_2;
+  for(i=j; i<9 ;i++) //comprobacion filas y columnas
+    {
       aux =0;
       aux_2 =0;
       for(j=i; j<9 ;j++)
       {
-         
-         if(matriz[i][j]==i)
-         {
-            aux++;
-         }
-         if(matriz[j][i])
-         {
-            aux_2++;
-         }
-         if((aux>1)||(aux_2>1))
-         {
-            break;
-         }
+        if(matriz[i][j]==i)
+        {
+        aux++;
+        }
+        if(matriz[j][i])
+        {
+        aux_2++;
+        }
+        if((aux>1)||(aux_2>1))
+        {
+        break;
+        }
       }
       if((aux>1)||(aux_2>1))
       {
-         break;
+        break;
       }
-   }
-   if((aux>1)||(aux_2>1))
-   {
-       return(0);
-   }
-   /*aqui comprobacion submatrices*/
-   if(compare_submatrix(matriz)!=1)
-   {
-       return(0);
-   }
-   return(1);
+    }
+  if((aux>1)||(aux_2>1))
+  {
+    return(0);
+  }
+  /*aqui comprobacion submatrices*/
+  if(compare_submatrix(matriz)==0)
+  {
+    return(0);
+  }
+  return(1);
 }
 
 
