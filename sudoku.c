@@ -59,7 +59,7 @@ List* get_adj_nodes(Node* n)
       {
          if(matriz[i][j]==0)
          {
-            for(int valor=0;valor<9;valor++)
+            for(int valor=1;valor<=9;valor++)
             {
                matriz[i][j]=valor;
                Node* n_node =(Node*)calloc(1,sizeof(Node));
