@@ -111,7 +111,6 @@ int is_valid(Node*n)
   /*aqui comprobacion submatrices*/
   if(compare_submatrix(matriz)!=1)
   {
-    printf("Prohibido Hablar de Huevito Rey\n");
     return(0);
   }
   return(1);
@@ -132,10 +131,13 @@ List* get_adj_nodes(Node* n)
          {
             for(int valor=1;valor<=9;valor++)
             {
-               matriz[i][j]=valor;
-               Node* n_node =(Node*)calloc(1,sizeof(Node));
-               memcpy(n_node->sudo,matriz,sizeof(matriz));
-               pushBack(list,n_node);
+              matriz[i][j]=valor;
+              Node* n_node =(Node*)calloc(1,sizeof(Node));
+              if(is_valid(n_node))
+              {
+                memcpy(n_node->sudo,matriz,sizeof(matriz));
+                pushBack(list,n_node);
+              }
             }
          }
       }
