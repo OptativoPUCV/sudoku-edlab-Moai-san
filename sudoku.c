@@ -80,13 +80,13 @@ int compare_submatrix(int matriz[9][9])
           {
             aux++;
           }
+          printf("%d\n",j);
           if (aux>1)
           {
             return(0);
           }
         }
         j=(j-3);
-        printf("%d\n",j);
       }
       i=(i-3);
     }
