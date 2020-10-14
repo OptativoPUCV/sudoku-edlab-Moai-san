@@ -99,6 +99,7 @@ int is_valid(Node*n)
       }
       if((aux>1)||((aux_2)>1))
       {
+        printf("%d,%d Prohibido Hablar de Huevito Rey\n",i,j);
         break;
       }
     }
