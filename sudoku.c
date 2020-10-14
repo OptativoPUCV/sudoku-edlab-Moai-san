@@ -78,11 +78,11 @@ int is_valid(Node*n)
   int j =0;
   int aux;
   int aux_2;
-  for(i=0; i<9 ;i++) //comprobacion filas y columnas
+  for(i=j; i<9 ;i++) //comprobacion filas y columnas
     {
       aux =0;
       aux_2 =0;
-      for(j=0; j<9 ;j++)
+      for(j=i; j<9 ;j++)
       {
         printf ("[%d] [%d] = %d\n",i,j,matriz[i][j]);
         if(matriz[i][j]==(i+1))
