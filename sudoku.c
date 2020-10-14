@@ -58,12 +58,8 @@ int compare_submatrix(int matriz[9][9])
         }
         if (aux>1)
         {
-            return(0);
+          return(0);
         }
-      }
-      if (aux>1)
-      {
-        return(0);
       }
       aux=0;
     }
