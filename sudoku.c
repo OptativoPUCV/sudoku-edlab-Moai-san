@@ -82,26 +82,26 @@ int is_valid(Node*n)
     {
       aux =0;
       aux_2 =0;
-      for(j=0; j<9 ;j++)
+      for(int valor=1;valor<=9;valor++)
       {
-        printf ("[%d] [%d] = %d\n",i,j,matriz[i][j]);
-        if(matriz[i][j]==(i+1))
+        for(j=0; j<9 ;j++)
         {
-          aux++;
+          printf ("[%d] [%d] = %d\n",i,j,matriz[i][j]);
+          if(matriz[i][j]==valor)
+          {
+            aux++;
+          }
+          if(matriz[j][i]==valor)
+          {
+            aux_2++;
+          }
+          if((aux>1)||((aux_2)>1))
+          {
+            return(0);
+          }
         }
-        if(matriz[j][i]==(i+1))
-        {
-          aux_2++;
-        }
-        if((aux>1)||((aux_2)>1))
-        {
-          break;
-        }
-      }
-      if((aux>1)||((aux_2)>1))
-      {
-        printf("%d,%d Prohibido Hablar de Huevito Rey\n",i,j);
-        break;
+        aux =0;
+        aux_2 =0;
       }
     }
   if((aux>1)||(aux_2>1))
